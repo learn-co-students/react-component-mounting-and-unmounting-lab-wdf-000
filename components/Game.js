@@ -9,6 +9,10 @@ class Game extends React.Component {
     this.setState({ time: new Date(Date.now())});
   }
 
+  componentWillMount(){
+    this.setCurrentTime();
+  }
+
   addPancake() {
     this.setState({
       pancakes: this.state.pancakes.concat(Date.now())
@@ -27,7 +31,7 @@ class Game extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = {  
       time: undefined,
       pancakes: [],
       cooked: 0,
