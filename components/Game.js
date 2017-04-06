@@ -1,7 +1,7 @@
-const React = require('react');
-const Pancake = require('./Pancake');
+import React from 'react';
+import Pancake from './Pancake';
 
-class Game extends React.Component {
+export default class Game extends React.Component {
 
   // TODO: create a componentWillMount() which will set the current time
   componentWillMount() {
@@ -58,5 +58,3 @@ class Game extends React.Component {
     )
   }
 }
-
-module.exports = Game;
